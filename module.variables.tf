@@ -1,4 +1,7 @@
 /*Initialization...*/
+
+variable "json-compartments" { default = "" }
+
 variable "json-vcns" { default = "" }
 variable "json-vcn-subnets" { default = "" }
 variable "json-vcn-internet-gateways" { default = "" }
