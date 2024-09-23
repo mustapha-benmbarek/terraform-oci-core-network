@@ -1,3 +1,4 @@
+variable "core-compartments" {}
 variable "core-vcns" {
   type = map(object({
     vcn-region-id        = optional(string)
