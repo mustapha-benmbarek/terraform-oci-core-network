@@ -1,11 +1,6 @@
-### Oracle Cloud Infrastructure (OCI)
-# Terraform | Core Networking Modules
+### <code style="color: red">`Oracle Cloud`</code>
+# TF Core Modules | Networking ![version](https://img.shields.io/badge/version-1.0.0-green)
 
-<code style="color : name_color">test</code>
-
-The background color is `#RRGGBB` for light mode and `#000000` for dark mode.
-
-![version](https://img.shields.io/badge/version-1.0.0-green)
 
 ## Overview
 The modules in this repository offer configurable and reusable infrastructure components that comply with OCI best practices. These modules are designed to be easy to plug into any OCI environment, enabling rapid and reliable deployment of Virtual Cloud Network (VCN) architecture and related service
