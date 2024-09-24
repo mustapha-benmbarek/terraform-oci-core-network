@@ -1,8 +1,11 @@
 /*Networking Module | Compartment */
+
 module "compartments" {
   source            = "./modules/compartment"
   core-compartments = local.lst-compartments
+  core-tenancy-id   = var.TENANCY_OCID
 }
+
 
 /*Networking Module | Virtual Cloud Network (VCN)*/
 module "vcns" {

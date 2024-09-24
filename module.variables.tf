@@ -1,5 +1,7 @@
 /*Initialization...*/
 
+variable "TENANCY_OCID" {}
+
 variable "json-compartments" { default = "" }
 
 variable "json-vcns" { default = "" }

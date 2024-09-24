@@ -20,7 +20,7 @@ locals {
 /*Data decoding...*/
 locals {
 
-  lst-compartments = try({ for obj in local.json-compartments.data : obj.compartment-name => obj }, tomap({}))
+  lst-compartments = try({ for obj in local.json-compartments.data : obj.comp-name => obj }, tomap({}))
 
   lst-vcns                  = try({ for obj in local.json-vcns.data : obj.vcn-name => obj }, tomap({}))
   lst-vcn-subnets           = try({ for obj in local.json-vcn-subnets.data : obj.sn-name => obj }, tomap({}))

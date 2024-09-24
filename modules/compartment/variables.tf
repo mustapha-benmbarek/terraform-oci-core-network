@@ -1,15 +1,12 @@
 variable "core-compartments" {
   type = map(object({
-    vcn-region-id        = optional(string)
-    vcn-compartment-name = string
-    vcn-name             = string
-    vcn-dns-label        = optional(string)
-    vcn-cidr-ipv4        = list(string)
-    vcn-cidr-ipv6-enable = optional(bool, false)
+    region-id        = optional(string)
+    comp-parent-name = optional(string, "")
+    comp-name        = string
+    comp-description = optional(string)
   }))
 }
 
-variable "tenancy_ocid" {
+variable "core-tenancy-id" {
   type = string
 }
-
