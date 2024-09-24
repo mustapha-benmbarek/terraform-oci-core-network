@@ -1,5 +1,10 @@
-# Oracle Cloud Infrastructure terraform-oci-core-networking
+### Oracle Cloud Infrastructure #terraform-oci-core-networking
 Terraform | Oracle Cloud Infrastructure (OCI) Core networking modules
+
+<code style="color : name_color">test</code>
+
+The background color is `#RRGGBB` for light mode and `#000000` for dark mode.
+
 ![version](https://img.shields.io/badge/version-1.0.0-green)
 
 ## Overview
