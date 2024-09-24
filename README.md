@@ -1,5 +1,5 @@
-### Oracle Cloud Infrastructure #terraform-oci-core-networking
-Terraform | Oracle Cloud Infrastructure (OCI) Core networking modules
+### Oracle Cloud Infrastructure (OCI)
+# Terraform | Core Networking Modules
 
 <code style="color : name_color">test</code>
 
