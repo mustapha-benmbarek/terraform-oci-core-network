@@ -9,3 +9,6 @@ variable "json-vcn-nat-gateways" { default = "" }
 variable "json-vcn-service-gateways" { default = "" }
 variable "json-vcn-route-tables" { default = "" }
 variable "json-vcn-security-lists" { default = "" }
+
+
+variable "json-cluster-placement-groups" { default = "" }

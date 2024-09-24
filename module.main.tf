@@ -34,3 +34,10 @@ module "vcn-nat-gateways" {
   core-compartments     = module.compartments.ids
   core-vcn-nat-gateways = local.lst-vcn-nat-gateways
 }
+
+/*Networking Module | Cluster Placement Group*/
+module "cluster-placement-groups" {
+  source                        = "./modules/cluster-placement-group"
+  core-compartments             = module.compartments.ids
+  core-cluster-placement-groups = local.lst-cluster-placement-groups
+}
