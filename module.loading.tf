@@ -31,5 +31,5 @@ locals {
 
   lst-cluster-placement-groups = try({ for obj in local.json-cluster-placement-groups.data : obj.cpg-name => obj }, tomap({}))
 
-  lst-customer-premises-equipments = try({ for obj in local.json-customer-premises-equipments.data : obj.cpg-name => obj }, tomap({}))
+  lst-customer-premises-equipments = try({ for obj in local.json-customer-premises-equipments.data : obj.cpe-name => obj }, tomap({}))
 }
