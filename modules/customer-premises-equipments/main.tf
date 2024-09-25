@@ -4,6 +4,6 @@ resource "oci_core_cpe" "this" {
   compartment_id      = var.core-compartments[each.value.comp-name].id
   ip_address          = each.value.cpe-ip-address
   display_name        = each.value.cpe-name
-  is_private          = each.value.cpe-ipsec-fc-enabled
+  is_private          = each.value.cpe-ipsec-fc-enable
   cpe_device_shape_id = each.value.cpe-device-id
 }

@@ -14,3 +14,5 @@ variable "json-vcn-security-lists" { default = "" }
 
 
 variable "json-cluster-placement-groups" { default = "" }
+
+variable "json-customer-premises-equipments" { default = "" }
