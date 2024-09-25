@@ -12,9 +12,8 @@ locals {
   json-vcn-route-tables      = try(jsondecode(file(var.json-vcn-route-tables)), [])
   json-vcn-security-lists    = try(jsondecode(file(var.json-vcn-security-lists)), [])
 
-  json-cluster-placement-groups = try(jsondecode(file(var.json-cluster-placement-groups)), [])
-
-
+  json-cluster-placement-groups     = try(jsondecode(file(var.json-cluster-placement-groups)), [])
+  json-customer-premises-equipments = try(jsondecode(file(var.json-customer-premises-equipments)), [])
 }
 
 /*Data decoding...*/
@@ -30,6 +29,7 @@ locals {
   lst-vcn-route-tables      = try({ for obj in local.json-vcn-route-tables.data : obj.rtb-name => obj }, tomap({}))
   lst-vcn-security-lists    = try({ for obj in local.json-vcn-security-lists.data : obj.sl-name => obj }, tomap({}))
 
-
   lst-cluster-placement-groups = try({ for obj in local.json-cluster-placement-groups.data : obj.cpg-name => obj }, tomap({}))
+
+  lst-customer-premises-equipments = try({ for obj in local.json-customer-premises-equipments.data : obj.cpg-name => obj }, tomap({}))
 }

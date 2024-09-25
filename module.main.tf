@@ -6,7 +6,6 @@ module "compartments" {
   core-tenancy-id   = var.TENANCY_OCID
 }
 
-
 /*Networking Module | Virtual Cloud Network (VCN)*/
 module "vcns" {
   source            = "./modules/vcn"
@@ -43,4 +42,11 @@ module "cluster-placement-groups" {
   source                        = "./modules/cluster-placement-group"
   core-compartments             = module.compartments.ids
   core-cluster-placement-groups = local.lst-cluster-placement-groups
+}
+
+/*Networking Module | Customer-Premises Equipment*/
+module "customer-premises-equipments" {
+  source                            = "./modules/customer-premises-equipment"
+  core-compartments                 = module.compartments.ids
+  core-customer-premises-equipments = local.lst-customer-premises-equipments
 }
