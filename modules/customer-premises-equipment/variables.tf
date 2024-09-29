@@ -7,7 +7,7 @@ variable "core-customer-premises-equipments" {
     comp-name           = string
     cpe-id              = optional(string)
     cpe-name            = optional(string)
-    cpe-ip-address      = string
+    cpe-ip-addr         = string
     cpe-ipsec-fc-enable = optional(bool, false)
     cpe-device-id       = string
     cpe-vendor-name     = optional(string)
