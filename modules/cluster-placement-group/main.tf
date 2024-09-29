@@ -1,4 +1,4 @@
-/*Resource creation: Virtual Cloud Network (VCN)*/
+/*Resource creation: Virtual Cloud Network (VCN)*
 resource "oci_core_clustercn" "this" {
   for_each = var.core-vcns
   //compartment_id = var.core-compartments[each.value.comp-name].id
@@ -36,3 +36,4 @@ resource "oci_cluster_placement_groups_cluster_placement_group" "test_cluster_pl
     value = var.cluster_placement_group_placement_instruction_value
   }
 }
+*/

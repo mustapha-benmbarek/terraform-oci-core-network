@@ -1,3 +1,4 @@
+
 /*Data loading...*/
 locals {
 
@@ -9,8 +10,10 @@ locals {
   json-vcn-internet-gateways = try(jsondecode(file(var.json-vcn-internet-gateways)), [])
   json-vcn-nat-gateways      = try(jsondecode(file(var.json-vcn-nat-gateways)), [])
   json-vcn-service-gateways  = try(jsondecode(file(var.json-vcn-service-gateways)), [])
-  json-vcn-route-tables      = try(jsondecode(file(var.json-vcn-route-tables)), [])
-  json-vcn-security-lists    = try(jsondecode(file(var.json-vcn-security-lists)), [])
+  json-vcn-dhcp-options      = try(jsondecode(file(var.json-vcn-dhcp-options)), [])
+
+  json-vcn-route-tables   = try(jsondecode(file(var.json-vcn-route-tables)), [])
+  json-vcn-security-lists = try(jsondecode(file(var.json-vcn-security-lists)), [])
 
   json-cluster-placement-groups     = try(jsondecode(file(var.json-cluster-placement-groups)), [])
   json-customer-premises-equipments = try(jsondecode(file(var.json-customer-premises-equipments)), [])
@@ -26,10 +29,14 @@ locals {
   lst-vcn-internet-gateways = try({ for obj in local.json-vcn-internet-gateways.data : obj.igw-name => obj }, tomap({}))
   lst-vcn-nat-gateways      = try({ for obj in local.json-vcn-nat-gateways.data : obj.ngw-name => obj }, tomap({}))
   lst-vcn-service-gateways  = try({ for obj in local.json-vcn-internet-gateways.data : obj.sgw-name => obj }, tomap({}))
-  lst-vcn-route-tables      = try({ for obj in local.json-vcn-route-tables.data : obj.rtb-name => obj }, tomap({}))
-  lst-vcn-security-lists    = try({ for obj in local.json-vcn-security-lists.data : obj.sl-name => obj }, tomap({}))
+  lst-vcn-dhcp-options      = try({ for obj in local.json-vcn-dhcp-options.data : obj.dhcp-name => obj }, tomap({}))
+
+
+  lst-vcn-route-tables   = try({ for obj in local.json-vcn-route-tables.data : obj.rtb-name => obj }, tomap({}))
+  lst-vcn-security-lists = try({ for obj in local.json-vcn-security-lists.data : obj.sl-name => obj }, tomap({}))
 
   lst-cluster-placement-groups = try({ for obj in local.json-cluster-placement-groups.data : obj.cpg-name => obj }, tomap({}))
 
   lst-customer-premises-equipments = try({ for obj in local.json-customer-premises-equipments.data : obj.cpe-name => obj }, tomap({}))
 }
+

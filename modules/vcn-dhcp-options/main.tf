@@ -1,6 +1,6 @@
 /*Resource creation: Virtual Cloud Network (VCN)*/
 resource "oci_core_dhcp_options" "this" {
-  for_each       = var.core-vcns
+  for_each       = var.core-vcn-dhcp-options
   compartment_id = var.core-compartments[each.value.comp-name].id
   vcn_id         = var.core-vcns[each.value.vcn-name].id
   display_name   = each.value.dhcp-name
@@ -13,6 +13,6 @@ resource "oci_core_dhcp_options" "this" {
 
   options {
     type                = each.value.dhcp-dns-search-domain-type
-    search_domain_names = each.value.dhcp-dns-search-domain
+    search_domain_names = [each.value.dhcp-dns-search-domain]
   }
 }

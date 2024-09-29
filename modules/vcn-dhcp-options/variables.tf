@@ -12,8 +12,8 @@ variable "core-vcn-dhcp-options" {
     dhcp-name                   = string
     dhcp-type                   = optional(string, "DomainNameServer")
     dhcp-dns-type               = string
-    dhcp-dns-server-addr        = optional(list(string))
+    dhcp-dns-server-addr        = optional(list(string), [])
     dhcp-dns-search-domain-type = optional(string, "SearchDomain")
-    dhcp-dns-search-domain      = optional(string, "")
+    dhcp-dns-search-domain      = string
   }))
 }

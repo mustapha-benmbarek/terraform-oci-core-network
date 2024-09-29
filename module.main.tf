@@ -37,6 +37,15 @@ module "vcn-nat-gateways" {
   core-vcn-nat-gateways = local.lst-vcn-nat-gateways
 }*/
 
+/*Networking Module | VCN DHCP Options*/
+module "vcn-dhcp-options" {
+  source                = "./modules/vcn-dhcp-options"
+  core-vcns             = module.vcns.ids
+  core-compartments     = module.compartments.ids
+  core-vcn-dhcp-options = local.lst-vcn-dhcp-options
+}
+
+
 /*Networking Module | Cluster Placement Group
 module "cluster-placement-groups" {
   source                        = "./modules/cluster-placement-group"
